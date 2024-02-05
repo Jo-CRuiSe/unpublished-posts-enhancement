@@ -23,10 +23,10 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://jo-cruise.github.io"
+url: ""
 
 github:
-  username: Jo CRuiSe # change to your github username
+  username: github_username # change to your github username
 
 twitter:
   username: twitter_username # change to your twitter username
@@ -120,9 +120,9 @@ baseurl: "/unpublished-posts-enhancement"
 
 # Leancloud configuration, use string constants
 Leancloud:
-  appId: 'rzV27a2iZkM3qCAIMnz2u6pO-9Nh9j0Va' # fill with your Leancloud appId
-  appKey: '6sPXQuSvQBiMk60c7sFhRPVz' # fill with your Leancloud appKey
-  serverURL: 'https://rzv27a2i.lc-cn-n1-shared.com' # fill with your Leancloud serverURL
+  appId: 'example' # fill with your Leancloud appId
+  appKey: 'example' # fill with your Leancloud appKey
+  serverURL: 'example' # fill with your Leancloud serverURL
 
 # ------------ The following options are not recommended to be modified ------------------
 
