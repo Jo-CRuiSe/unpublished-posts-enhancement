@@ -116,7 +116,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: "/shelter"
+baseurl: "/unpublished-posts-enhancement"
 
 # Leancloud configuration, use string constants
 Leancloud:
