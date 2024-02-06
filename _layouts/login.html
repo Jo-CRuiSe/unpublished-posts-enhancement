@@ -140,7 +140,9 @@ layout: compress
         <input type="email" id="email" placeholder="Email(MUST)">
         <input type="submit" value="Login" id="loginBtn">
         <div class="footer">
-            <button id="signUp">Go to Register</button>
+            {% if site.Leancloud.allowRegister %}
+                <button id="signUp">Go to Register</button>
+            {% endif %}
             <button id="forgotPassword">Forgot Password?</button>
         </div>
     </div>
