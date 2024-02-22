@@ -192,6 +192,13 @@ layout: compress
             return re.test(email);
         }
 
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
         document.getElementById('loginBtn').addEventListener("click", function () {
             var username = document.getElementById('username').value.trim();
             var password = document.getElementById('password').value.trim();
@@ -201,9 +208,13 @@ layout: compress
                         /* 登录成功 */
                         console.log('登录成功');
                         console.log(AV.User.emailVerified);
-                        document.getElementById('username').value = '';
-                        document.getElementById('password').value = '';
-                        window.location.href = '{{ site.baseurl }}';
+                        /* document.getElementById('username').value = '';
+                        document.getElementById('password').value = ''; */
+
+                        let redirectUrl = decodeURIComponent(getUrlParameter('redirect'));
+
+                        window.location.href = redirectUrl;
+                        /* window.location.href = '{{ site.baseurl }}'; */
                     } else {
                         alert('当前用户邮箱未通过验证，暂时无法登录');
                     }
